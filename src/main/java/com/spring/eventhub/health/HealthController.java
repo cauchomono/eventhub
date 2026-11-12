@@ -16,7 +16,7 @@ public class HealthController {
 
     @GetMapping
     @NoEnvelopeBody 
-    public ResponseEntity<HealthResponse> getHeath(
+    public ResponseEntity<HealthResponse> getHealth(
             @RequestHeader(value = "x-client-version", required = false) String clientVersion) {
         HealthResponse health = new HealthResponse(clientVersion, "ok", "Event hub is running", Instant.now());
         return ResponseEntity.ok(health);
