@@ -32,5 +32,5 @@ jobs:
           mvn -B verify
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.organization=cauchomono
-          -Dsonar.projectKey=eventhub
+          -Dsonar.projectKey=cauchomono
           -Dsonar.host.url=https://sonarcloud.io
