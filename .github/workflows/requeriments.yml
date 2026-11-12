@@ -21,8 +21,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21   # ajusta a la versión de tu proyecto
-          cache: maven
+          java-version: 21
 
       - name: Build and analyze
         env:
@@ -32,5 +31,5 @@ jobs:
           mvn -B verify
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.organization=cauchomono
-          -Dsonar.projectKey=cauchomono
+          -Dsonar.projectKey=cauchomono_eventhub
           -Dsonar.host.url=https://sonarcloud.io
